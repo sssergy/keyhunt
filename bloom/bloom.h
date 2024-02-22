@@ -8,6 +8,10 @@
 #ifndef _BLOOM_H
 #define _BLOOM_H
 
+#ifdef _WIN64
+#include <windows.h>
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -37,18 +41,16 @@ struct bloom
   uint8_t major;
   uint8_t minor;
   double bpe;
-  uint8_t checksum[32];
-  uint8_t checksum_backup[32];
   uint8_t *bf;
-  pthread_mutex_t mutex;
 };
 /*
 Customs
 */
 
-int bloom_dummy(struct bloom * bloom, uint64_t entries, long double error);
+/*
 int bloom_loadcustom(struct bloom * bloom, char * filename);
 int bloom_savecustom(struct bloom * bloom, char * filename);
+*/
 
 
 /** ***************************************************************************
@@ -184,7 +186,7 @@ int bloom_reset(struct bloom * bloom);
  *     1 - on failure
  *
  */
-int bloom_save(struct bloom * bloom, char * filename);
+//int bloom_save(struct bloom * bloom, char * filename);
 
 
 /** ***************************************************************************
@@ -202,7 +204,7 @@ int bloom_save(struct bloom * bloom, char * filename);
  *     > 0 - on failure
  *
  */
-int bloom_load(struct bloom * bloom, char * filename);
+//int bloom_load(struct bloom * bloom, char * filename);
 
 
 /** ***************************************************************************

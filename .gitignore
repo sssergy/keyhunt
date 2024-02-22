@@ -2,7 +2,12 @@ bPfile
 hexcharstoraw
 *.bin
 keyhunt
+bsgsd
 KEYFOUNDKEYFOUND.txt
+VANITYKEYFOUND.txt
+*.dat
+*.tbl
+*.blm
 
 # Prerequisites
 *.d

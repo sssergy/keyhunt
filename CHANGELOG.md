@@ -1,3 +1,62 @@
+# Version 0.2.230519 Satoshi Quest
+- Speed x2 in BSGS mode for main version
+
+# Version 0.2.230507 Satoshi Quest
+- fixed some variables names
+- fixed bug in addvanity (realloc problem with dirty memory)
+- Added option -6 to skip SHA256 checksum when you read the files (Improved startup process)
+- Added warning when you Endomorphism and BSGS, THEY DON'T WORK together!
+- Legacy version for ARM processor and other systems
+- remove pub2rmd
+
+# Version 0.2.230430 Satoshi Quest
+- fixed typos in README
+- Speed counter fixed for Compress search without endomorphism check https://github.com/albertobsd/keyhunt/tree/development#Speeds
+
+# Version 0.2.230428 Satoshi Quest
+- Merge of address and rmd160 speeds
+- Added option for endomorphism
+- Added SAVE bloom filter and table option for adddress, rmd160, minikeys and xpoint
+- Improved Makefile options
+- Updated random function to use the Linux RNG with the function getrandom
+
+# Version 0.2.211117 SSE Trick or treat ¡Beta!
+- Minikeys new sequential generator and x2 times more speed
+- third bloom filter check for bsgs 20% less memory usage
+
+# Version 0.2.211031 Trick or treat ¡Beta!
+- Minikeys improvements in speed
+- Test to try solve the https://github.com/albertobsd/keyhunt/issues/139 issue
+
+# Version 0.2.211026 Chocolate ¡Beta!
+- Solved https://github.com/albertobsd/keyhunt/issues/130
+- Minikeys new generator improvements in speed
+
+# Version 0.2.211024 Chocolate ¡Beta!
+- Ethereum support
+- Double speed for rmd160 mode
+- Minikeys mode support
+- Stride option
+
+# Version 0.2.211018 Chocolate ¡Beta!
+- Solved some bugs: https://github.com/albertobsd/keyhunt/issues/122 https://github.com/albertobsd/keyhunt/issues/111
+- Files are going to be updated automatillyca 
+-- from keyhunt_bsgs_3_*.blm  to keyhunt_bsgs_4*.blm 
+-- from keyhunt_bsgs_1_*.blm  to keyhunt_bsgs_5*.blm 
+-- the program will notify you when time to delete the old files
+
+# Version 0.2.211012 Chocolate ¡Beta!
+- Fixed the slow bP table generation.
+-- This fix make obsolete the files keyhunt_bsgs_0_*.blm 
+-- please delete those files, please do:
+
+```
+rm keyhunt_bsgs_0_*.blm 
+```
+
+- Added multi vanitysearch for address mode
+
+
 # Version 0.2.211007 Chocolate ¡Beta!
 - BSGS improvements:
 --  10x more Speed

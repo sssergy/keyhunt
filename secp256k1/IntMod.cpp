@@ -513,11 +513,8 @@ void Int::ModInv() {
 // ------------------------------------------------
 
 void Int::ModExp(Int *e) {
-
   Int base(this);
   SetInt32(1);
-  uint32_t i = 0;
-
   uint32_t nbBit = e->GetBitLength();
   for(int i=0;i<(int)nbBit;i++) {
     if (e->GetBit(i))
@@ -597,7 +594,7 @@ void Int::ModSqrt() {
 
   } else if ((_P.bits64[0] & 3) == 1) {
 
-    int nbBit = _P.GetBitLength();
+    //int nbBit = _P.GetBitLength();
 
     // Tonelli Shanks
     uint64_t e=0;
@@ -855,7 +852,7 @@ void Int::MontgomeryMult(Int *a, Int *b) {
 
 void Int::ModMulK1(Int *a, Int *b) {
 
-#ifndef WIN64
+#ifndef _WIN64
 #if (__GNUC__ > 7) || (__GNUC__ == 7 && (__GNUC_MINOR__ > 2))
   unsigned char c;
 #else
@@ -917,7 +914,7 @@ void Int::ModMulK1(Int *a, Int *b) {
 
 void Int::ModMulK1(Int *a) {
 
-#ifndef WIN64
+#ifndef _WIN64
 #if (__GNUC__ > 7) || (__GNUC__ == 7 && (__GNUC_MINOR__ > 2))
   unsigned char c;
 #else
@@ -977,7 +974,7 @@ void Int::ModMulK1(Int *a) {
 
 void Int::ModSquareK1(Int *a) {
 
-#ifndef WIN64
+#ifndef _WIN64
 #if (__GNUC__ > 7) || (__GNUC__ == 7 && (__GNUC_MINOR__ > 2))
   unsigned char c;
 #else
